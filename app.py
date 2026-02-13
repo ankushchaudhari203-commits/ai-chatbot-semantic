@@ -57,6 +57,18 @@ def handle_conversation(user_input, intent_embeddings, memory):
 
     lower_input = user_input.lower()
 
+    # 🧠 If order already completed
+    if memory["order"]["status"] == "completed":
+        return "Your order has already been completed. Start a new order if you'd like!"
+
+    # 🧠 Checkout state handling
+    if memory["order"]["status"] == "checkout":
+        if "confirm" in lower_input:
+            memory["order"]["status"] = "completed"
+            return "Order confirmed! Thank you for your purchase."
+
+        return "You are currently at checkout. Type 'confirm' to complete the order."
+
     # Remove last item
     if "remove" in lower_input:
         return remove_last_item(memory)
@@ -120,6 +132,7 @@ def handle_conversation(user_input, intent_embeddings, memory):
 
     # Fallback to semantic intent matching
     return get_best_match(user_input, intent_embeddings)
+
 
 
 def generate_order_summary(memory):
