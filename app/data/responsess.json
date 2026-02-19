@@ -1,0 +1,59 @@
+import os
+import json
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "responses.json")
+
+with open(DATA_PATH, "r") as f:
+    responses = json.load(f)
+
+{
+  "greeting": {
+    "patterns": [
+      "hi",
+      "hello",
+      "hey",
+      "good evening",
+      "good morning"
+    ],
+    "response": "Hello! Welcome to Pizza Palace. How can I help you today?"
+  },
+
+  "menu": {
+    "patterns": [
+      "show me the menu",
+      "what do you have",
+      "what pizzas do you serve",
+      "can I see the menu",
+      "list your pizzas"
+    ],
+    "response": "We offer Large, Medium, and Small sizes.\n\nPizzas: Pepperoni, Farmhouse, Veggie Delite, Buffalo Chicken, Cheese, Red Roasted Fire.\n\nWould you like to place an order?"
+  },
+
+  "order_status": {
+    "patterns": [
+      "where is my order",
+      "track my order",
+      "order status"
+    ],
+    "response": "Please provide your order number so I can check the status."
+  },
+
+  "hours": {
+    "patterns": [
+      "what are your hours",
+      "when are you open",
+      "opening hours"
+    ],
+    "response": "We are open from 11 AM to 10 PM, seven days a week."
+  },
+
+  "delivery_time": {
+    "patterns": [
+      "how long is delivery",
+      "delivery time",
+      "when will it arrive"
+    ],
+    "response": "Delivery typically takes 30-45 minutes depending on location and order volume."
+  }
+}
