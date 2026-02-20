@@ -13,7 +13,6 @@ class ChatbotEngine:
     def __init__(self):
         self.sessions = {}
 
-        # Load responses.json
         base_dir = os.path.dirname(os.path.dirname(__file__))
         data_path = os.path.join(base_dir, "data", "responses.json")
 
@@ -32,7 +31,8 @@ class ChatbotEngine:
 
         reply = conversation.process(message)
 
-        return reply, conversation.order_manager.status
+        total = conversation.order_manager.get_total()
+        items = conversation.order_manager.get_items()
+        state = conversation.order_manager.status
 
-
-
+        return reply, state, total, items

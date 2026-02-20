@@ -1,51 +1,261 @@
-
 {
   "greeting": {
     "patterns": [
       "hi",
       "hello",
       "hey",
+      "good morning",
       "good evening",
-      "good morning"
+      "yo",
+      "what's up",
+      "hiya",
+      "heyy",
+      "hello there",
+      "hi pizza bot",
+      "hey pizza",
+      "hola"
     ],
-    "response": "Hello! Welcome to Pizza Palace. How can I help you today?"
+    "responses": [
+      "Welcome to Pizza Palace! 🍕 What can I get started for you?",
+      "Hi there! Ready to order something delicious?"
+    ]
   },
 
-  "menu": {
+  "show_menu": {
     "patterns": [
+      "menu",
+      "show menu",
       "show me the menu",
       "what do you have",
-      "what pizzas do you serve",
-      "can I see the menu",
-      "list your pizzas"
+      "what pizzas do you have",
+      "pizza options",
+      "available pizzas",
+      "what can I order",
+      "see the options",
+      "list of pizzas",
+      "what's available",
+      "can I see what you have",
+      "display menu"
     ],
-    "response": "We offer Large, Medium, and Small sizes.\n\nPizzas: Pepperoni, Farmhouse, Veggie Delite, Buffalo Chicken, Cheese, Red Roasted Fire.\n\nWould you like to place an order?"
+    "responses": [
+      "Here’s our menu:\n🍕 Pepperoni\n🍕 Veggie\n🍕 Cheese\n🍕 Buffalo Chicken\nSizes: Small, Medium, Large."
+    ]
   },
 
-  "order_status": {
+  "ask_size": {
     "patterns": [
+      "what sizes",
+      "sizes available",
+      "size options",
+      "pizza sizes",
+      "how big",
+      "what size options",
+      "small medium large?",
+      "do you have large",
+      "is medium available",
+      "size list",
+      "available sizes",
+      "big size options",
+      "tell me sizes"
+    ],
+    "responses": [
+      "We offer Small, Medium, and Large sizes."
+    ]
+  },
+
+  "ask_price": {
+    "patterns": [
+      "price",
+      "how much",
+      "cost",
+      "how much is it",
+      "what's the price",
+      "pricing",
+      "how much for large",
+      "price for medium",
+      "what do I pay",
+      "total cost",
+      "how expensive",
+      "rate",
+      "what is the charge"
+    ],
+    "responses": [
+      "Prices vary by size. Tell me the pizza type and size for exact pricing."
+    ]
+  },
+
+  "add_item": {
+    "patterns": [
+      "add pizza",
+      "i want pizza",
+      "order pizza",
+      "get me a pizza",
+      "add to cart",
+      "i'll take",
+      "give me",
+      "place order",
+      "add pepperoni",
+      "add veggie",
+      "i want a large",
+      "can I get",
+      "put one pizza"
+    ],
+    "responses": [
+      "Sure! Please tell me the pizza type and size."
+    ]
+  },
+
+  "remove_item": {
+    "patterns": [
+      "remove last",
+      "delete item",
+      "remove pizza",
+      "take it off",
+      "undo last",
+      "remove from cart",
+      "cancel last item",
+      "delete last order",
+      "i changed my mind",
+      "remove that",
+      "take that out",
+      "discard item",
+      "drop last"
+    ],
+    "responses": [
+      "Removing the last item from your cart."
+    ]
+  },
+
+  "clear_order": {
+    "patterns": [
+      "clear cart",
+      "cancel order",
+      "start over",
+      "reset order",
+      "empty cart",
+      "clear everything",
+      "delete all",
+      "cancel everything",
+      "remove all items",
+      "wipe cart",
+      "i want to restart",
+      "reset everything",
+      "clear my order"
+    ],
+    "responses": [
+      "Your cart has been cleared."
+    ]
+  },
+
+  "checkout": {
+    "patterns": [
+      "checkout",
+      "place order",
+      "confirm order",
+      "i'm done",
+      "that's all",
+      "complete order",
+      "finalize",
+      "go ahead",
+      "finish order",
+      "ready to pay",
+      "complete purchase",
+      "submit order",
+      "proceed to checkout"
+    ],
+    "responses": [
+      "Let me calculate your total and place your order."
+    ]
+  },
+
+  "track_order": {
+    "patterns": [
+      "track order",
+      "order status",
       "where is my order",
-      "track my order",
-      "order status"
+      "track my pizza",
+      "delivery status",
+      "is my order ready",
+      "has my order shipped",
+      "track delivery",
+      "check status",
+      "pizza status",
+      "when will it arrive",
+      "order update",
+      "status update"
     ],
-    "response": "Please provide your order number so I can check the status."
+    "responses": [
+      "Please provide your order ID to track your pizza."
+    ]
   },
 
-  "hours": {
+  "help": {
     "patterns": [
-      "what are your hours",
-      "when are you open",
-      "opening hours"
+      "help",
+      "what can you do",
+      "how does this work",
+      "instructions",
+      "assist me",
+      "guide me",
+      "what are my options",
+      "how to order",
+      "what can I say",
+      "how to use this",
+      "support",
+      "need help",
+      "show commands"
     ],
-    "response": "We are open from 11 AM to 10 PM, seven days a week."
+    "responses": [
+      "I can help you browse the menu, add pizzas, remove items, checkout, and track orders."
+    ]
   },
 
-  "delivery_time": {
+  "thanks": {
     "patterns": [
-      "how long is delivery",
-      "delivery time",
-      "when will it arrive"
+      "thanks",
+      "thank you",
+      "thx",
+      "appreciate it",
+      "thank you so much",
+      "cool thanks",
+      "great thanks",
+      "awesome thanks",
+      "ty",
+      "much appreciated",
+      "thanks buddy",
+      "thank u",
+      "thanks a lot"
     ],
-    "response": "Delivery typically takes 30-45 minutes depending on location and order volume."
+    "responses": [
+      "You're welcome! 😊 Anything else I can help with?"
+    ]
+  },
+
+  "goodbye": {
+    "patterns": [
+      "bye",
+      "goodbye",
+      "see you",
+      "later",
+      "catch you later",
+      "talk later",
+      "i'm leaving",
+      "exit",
+      "quit",
+      "close",
+      "end chat",
+      "see ya",
+      "peace"
+    ],
+    "responses": [
+      "Goodbye! 🍕 Hope to serve you again soon!"
+    ]
+  },
+
+  "fallback": {
+    "responses": [
+      "I’m not sure I understood that. Could you rephrase?",
+      "Hmm… I didn’t get that. Try asking about the menu or placing an order."
+    ]
   }
 }

@@ -95,4 +95,12 @@ class OrderManager:
 
         self.status = "completed"
         return "Payment confirmed! Your order is now being prepared."
+        
+    def get_total(self):
+        return sum(item["price"] for item in self.items)
 
+    def get_items(self):
+        return [
+            f"{item['size']} {item['type']} - ${item['price']:.2f}"
+            for item in self.items
+        ]

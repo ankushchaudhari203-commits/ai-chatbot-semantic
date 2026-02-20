@@ -1,10 +1,20 @@
 from app.engine.order_manager import OrderManager
 
+class ChatbotEngine:
 
+    def __init__(self, intent_matcher):
+        self.intent_matcher = intent_matcher
+        self.order_manager = OrderManager()
 
+    def get_total(self):
+        return self.order_manager.get_total()
+
+    def get_items(self):
+        return self.order_manager.get_items()
 
 
 class ConversationEngine:
+    
     def __init__(self, intent_matcher, session_id):
         self.intent_matcher = intent_matcher
         self.order_manager = OrderManager()
