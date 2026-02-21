@@ -1,66 +1,33 @@
-**Chat-Bot: Semantic Edition**
-An intent-based conversational engine that enables natural-language pizza
-ordering with context awareness and dynamic pricing.
+**🍕 Chat-Bot:** Hybrid Conversational Ordering System A full-stack conversational pizza ordering system built through progressive architectural evolution — from rule-based logic to modular API design to complete frontend integration. This project demonstrates structured backend engineering, conversational UX modeling, and full-stack product thinking.
 
+**🚀 Project Evolution (3 Phases)** This project was intentionally developed in three phases to showcase architectural growth and scalability.
 
-**Overview**
-Chat-Bot has evolved from rule-based keyword matching to embedding-driven
-semantic understanding. The system interprets user intent using vector
-similarity, maintains session-level conversation state, and manages
-multi-item orders with dynamic pricing — all through natural text
-interaction.
+**🟢 Phase 1** — Rule-Based Engine Objective: Establish conversational fundamentals. Keyword-based intent matching Basic cart handling Simple string responses Monolithic conversational logic This phase focused on understanding how conversational flows operate at a fundamental level.
 
+**🔵 Phase 2** 
+Modular API Architecture (FastAPI + Engines) Objective: Transform the chatbot into a scalable backend service. Backend Stack Python FastAPI Uvicorn JSON-based intent configuration
 
-**What It Does**
-• Order pizza — Place orders using natural conversational language
-• Browse menu — View available pizzas and pricing
-• Manage cart — Add, remove, or clear items before checkout
-• Generate summaries — View detailed order breakdown and total cost
-• Context awareness — Maintains session memory for multi-turn conversations
-• Order lifecycle management — Tracks order states from building to checkout
+Engine Architecture ChatbotEngine ConversationEngine OrderManager
 
+Component Responsibilities ChatbotEngine Handles API requests Enforces structured response contract Maintains system consistency ConversationEngine Performs intent matching Maps user input to conversational flows Uses configurable responses.json OrderManager Manages cart state Calculates dynamic pricing Controls add/remove/reset operations Handles checkout lifecycle
 
-**What’s New in This Version**
-• Semantic intent matching — Embedding-based similarity replaces keyword
-matching
-• Precomputed embeddings — Optimized performance for faster intent
-recognition
-• Context memory — Slot filling for size, type, and order state tracking
-• Dynamic pricing engine — Calculates totals based on selections
-• Stateful order lifecycle — Controlled transition from building → checkout → completed
-• Multi-item cart system — Supports multiple pizzas per session
+**🟣 Phase 3** 
+Full-Stack Integration (SwiftUI + API) Objective: Deliver complete end-to-end conversational product. macOS SwiftUI frontend Real-time API integration Structured JSON rendering State synchronization between UI and backend Multi-turn conversational interaction This phase demonstrates frontend-backend contract discipline and product-level integration.
 
+**🧠 Hybrid Conversational Design The chatbot uses a hybrid architecture combining:** Rule-based intent matching JSON-configurable questionnaire engine Modular backend separation of concerns Stateful cart lifecycle management Structured API contract enforcement The system is designed for future extensibility toward semantic or embedding-based intent matching.
 
-**How It Works**
-The chatbot uses an intent-based architecture where user input is converted
-into 
-embeddings and compared against precomputed intent pattern vectors. A
-context engine maintains session memory, enabling slot filling and
-multi-turn conversation handling. A pricing module calculates totals
-dynamically, while a state manager enforces order lifecycle rules.
+**📦 Structured API Response Contract All responses follow a consistent schema:** 
+{ "reply": "string", "state": "string", "total_price": 0.0, "items": [] }
 
+Why This Matters Predictable frontend rendering Clean state transitions Clear separation of business logic and UI Scalable API design
 
-**Requirements**
-• Python 3.x
-• sentence-transformers
-• torch
+✨ Core Features Intent-driven conversational engine 13 configurable intent categories 12–13 natural language patterns per intent JSON-based dialogue expansion without backend changes Multi-item cart management Add / remove / clear cart functionality Checkout workflow with dynamic total calculation Structured order state transitions Full-stack FastAPI + SwiftUI integration
 
+🛠 Tech Stack Backend Python FastAPI Uvicorn JSON configuration engine Frontend SwiftUI (macOS)
 
-**Getting Started**
-1. Clone the repository
-2. Install dependencies:
-3. pip install -r requirements.txt
-Run the chatbot:
-python app.py
-4. Start ordering via conversational prompts
+🔮 Future Enhancements Semantic similarity matching (Sentence Transformers) SQLite persistence layer Order ID generation Session management Cloud deployment Optional LLM integration
 
-
-**Architecture**
-Intent Recognition — Embedding-based semantic similarity
-Context Engine — Session-level memory & slot filling
-Pricing Module — Structured business logic for cost calculation
-Order State Manager — Lifecycle enforcement and cart management
-
+🎯 What This Project Demonstrates Clean layered backend architecture Structured API contract design Conversational UX modeling State-based order lifecycle control Progressive system evolution Product-oriented engineering mindset
 
 **Future Enhancements**
 • API service layer (FastAPI)
